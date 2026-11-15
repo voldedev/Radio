@@ -1,4 +1,4 @@
-import { stations } from "./stations.js?v=50";
+import { stations } from "./stations.js?v=51";
 import { getLanguage, hasLanguagePreference, setLanguage, t } from "./i18n.js?v=2";
 import { addHistory, clearHistory, readHistory, startPolling, stopPolling } from "./nowplaying.js?v=4";
 

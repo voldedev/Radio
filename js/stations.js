@@ -374,14 +374,14 @@ export const stations = [
   },
   {
     id: "station-32",
-    name: "DEF CON Radio",
-    logo: "./images/defconradio.png",
-    streamUrl: "https://ice4.somafm.com/defcon-128-mp3",
+    name: "Music for Programming",
+    logo: "./images/music-for-programming.svg",
+    streamUrl: "https://datashat.net/music_for_programming_77-phonaut.mp3",
     nowPlayingUrl: null,
     nowPlayingType: null,
     parseNowPlaying: null,
-    genre: "Programming & tech",
-    accent: "#7bb7d1"
+    genre: "Programming & focus",
+    accent: "#8fd3c7"
   },
   {
     id: "station-33",
@@ -433,7 +433,7 @@ const websiteUrls = {
   "station-29": "https://www.slam.nl/",
   "station-30": "https://globusguld.dk/",
   "station-31": "https://classicfm.dk/",
-  "station-32": "https://somafm.com/defcon/",
+  "station-32": "https://musicforprogramming.net/latest/",
   "station-33": "https://laut.fm/handsuplovers"
 };
 
