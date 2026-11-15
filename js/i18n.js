@@ -7,7 +7,7 @@ const translations = {
     dimButton: "Aktivér dim-tilstand", loading: "Indlæser", playing: "Afspiller", paused: "Pause",
     liveRadio: "Live radio", noRadio: "Ingen radio her endnu", welcomeTitle: "Vælg en radio for at starte", welcomeArtist: "Din lyd, dit rum.",
     emptyHistory: "Ingen sange i historikken endnu.", visitWebsite: "Hjemmeside",
-    seoDescription: "Dansk og international radio, fest, gaming, tech og musik"
+    seoDescription: "Dansk og international radio, party, fest, gaming, tech og musik"
   },
   en: {
     selectionHint: "Choose a station to start", idle: "Ready to play", nowPlaying: "Now playing", liveDirectory: "Live directory",
