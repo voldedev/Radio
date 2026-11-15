@@ -117,13 +117,17 @@ input[type="range"] { width: 100%; height: 4px; accent-color: var(--accent); cur
 @keyframes aurora-drift { from { transform: translate3d(-2%, -1%, 0) scale(1); } to { transform: translate3d(3%, 2%, 0) scale(1.06); } }
 @media (max-width: 1100px) {
   body { overflow: auto; }
+  body::after { display: none; }
+  .background-aurora, .ambient { animation: none; filter: none; }
+  .site-header, .site-footer { backdrop-filter: none; }
+  .history-panel { background: rgba(23,28,37,.96); backdrop-filter: none; }
   .site-header { padding: 0 16px; }
   .brand span { font-size: 13px; }
   .header-status { display: none; }
   .app-shell { display: flex; flex-direction: column; height: auto; min-height: calc(100dvh - 64px); padding: 16px 16px 45px; }
   .station-stage { position: relative; display: block; order: 2; width: 100%; min-height: 0; padding: 0; }
   .station-ring { position: relative; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-template-rows: none; gap: 8px; height: auto; }
-  .station-tile { min-height: 0; }
+  .station-tile { min-height: 0; contain: layout paint; content-visibility: auto; contain-intrinsic-size: 120px 100px; }
   .station-logo { flex: none; position: relative; width: 100%; height: auto; aspect-ratio: 16 / 9; transform: scale(.96); animation-delay: var(--delay); }
   .station-logo:hover, .station-logo:active { transform: scale(1.025); }
   .station-logo::after { display: block; left: 5px; bottom: 4px; padding: 2px 4px; font-size: 9px; }
