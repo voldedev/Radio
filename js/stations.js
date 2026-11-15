@@ -394,12 +394,34 @@ export const stations = [
     genre: "Hands up & dance",
     accent: "#ef9fca"
   },
-  ...placeholderStations.slice(1).map((station, index) => ({
+  {
+    id: "station-34",
+    name: "bigFM LoFi Focus",
+    logo: "./images/bigfm-lofi-focus.png",
+    streamUrl: "https://stream.bigfm.de/lofifocus/mp3-128/radiobrowser",
+    nowPlayingUrl: null,
+    nowPlayingType: null,
+    parseNowPlaying: null,
+    genre: "Lo-fi & focus",
+    accent: "#9b8cff"
+  },
+  {
+    id: "station-35",
+    name: "0nlineradio CHILLOUT",
+    logo: "./images/0nlineradio-chillout.svg",
+    streamUrl: "https://stream.0nlineradio.com/chillout?ref=radiobrowser",
+    nowPlayingUrl: null,
+    nowPlayingType: null,
+    parseNowPlaying: null,
+    genre: "Chillout & ambient",
+    accent: "#7bb7d1"
+  },
+  ...placeholderStations.slice(3).map((station, index) => ({
     ...station,
-    id: `station-${String(index + 34).padStart(2, "0")}`,
+    id: `station-${String(index + 36).padStart(2, "0")}`,
     name: "No radio here yet",
-    logo: `./images/stations/station-${String(index + 34).padStart(2, "0")}.svg`,
-    streamUrl: `https://example.com/stream${index + 34}`
+    logo: `./images/stations/station-${String(index + 36).padStart(2, "0")}.svg`,
+    streamUrl: `https://example.com/stream${index + 36}`
   }))
 ];
 
@@ -434,7 +456,9 @@ const websiteUrls = {
   "station-30": "https://globusguld.dk/",
   "station-31": "https://classicfm.dk/",
   "station-32": "https://kfrp.live/",
-  "station-33": "https://laut.fm/handsuplovers"
+  "station-33": "https://laut.fm/handsuplovers",
+  "station-34": "https://www.bigfm.de/lofifocus",
+  "station-35": "https://0nlineradio.com/"
 };
 
 stations.forEach((station) => { station.websiteUrl = websiteUrls[station.id] || null; });
