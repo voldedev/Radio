@@ -376,7 +376,7 @@ export const stations = [
     id: "station-32",
     name: "DEF CON Radio",
     logo: "./images/defconradio.png",
-    streamUrl: "https://ice1.somafm.com/defcon-128-mp3",
+    streamUrl: "https://ice4.somafm.com/defcon-128-mp3",
     nowPlayingUrl: null,
     nowPlayingType: null,
     parseNowPlaying: null,
