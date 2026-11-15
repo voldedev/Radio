@@ -374,14 +374,14 @@ export const stations = [
   },
   {
     id: "station-32",
-    name: "Music for Programming",
-    logo: "./images/music-for-programming.svg",
-    streamUrl: "https://datashat.net/music_for_programming_77-phonaut.mp3",
+    name: "KFRP Radio",
+    logo: "./images/kfrp-radio.png",
+    streamUrl: "https://radio.kfrp.live/listen/kfrp_radio/radio.mp3",
     nowPlayingUrl: null,
     nowPlayingType: null,
     parseNowPlaying: null,
-    genre: "Programming & focus",
-    accent: "#8fd3c7"
+    genre: "Underground hip-hop & dark rap",
+    accent: "#c75c68"
   },
   {
     id: "station-33",
@@ -433,7 +433,7 @@ const websiteUrls = {
   "station-29": "https://www.slam.nl/",
   "station-30": "https://globusguld.dk/",
   "station-31": "https://classicfm.dk/",
-  "station-32": "https://musicforprogramming.net/latest/",
+  "station-32": "https://kfrp.live/",
   "station-33": "https://laut.fm/handsuplovers"
 };
 

@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title">
-  <title>Music for Programming</title>
-  <rect width="256" height="256" fill="#17202b"/>
-  <path d="M58 70h140v116H58z" fill="none" stroke="#8fd3c7" stroke-width="8"/>
-  <path d="M84 108h88M84 132h62M84 156h76" fill="none" stroke="#d8cbb8" stroke-linecap="round" stroke-width="8"/>
-  <path d="M182 82v66a18 18 0 1 1-8-15V82z" fill="#6c8ebf"/>
-</svg>
