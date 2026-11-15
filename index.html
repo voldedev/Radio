@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Radio Player Denmark samler danske radiostationer, programmeringsradio, tech og musik i én gratis online radioafspiller.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="Wolmann Entertainment">
+  <meta name="theme-color" content="#171c25">
+  <meta property="og:title" content="Radio Player Denmark">
+  <meta property="og:description" content="Lyt til danske radiostationer, programmeringsradio, tech og musik direkte i browseren.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="da_DK">
+  <meta property="og:site_name" content="Radio Player Denmark">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Radio Player Denmark">
+  <meta name="twitter:description" content="Gratis radioafspiller med danske stationer, tech og musik.">
+  <link rel="canonical" href="./">
+  <title>Radio Player Denmark</title>
+  <link rel="icon" href="./images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/tokens.css">
+  <link rel="stylesheet" href="./css/style.css?v=4">
+</head>
+<body>
+  <div class="background-aurora" aria-hidden="true"></div>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="Radio Player Denmark">
+      <img src="./images/logo.svg" alt="" width="34" height="34">
+      <span>Radio Player Denmark</span>
+    </a>
+    <div class="header-actions">
+      <span class="header-status"><span class="header-status-dot"></span><span data-i18n="liveDirectory">Live directory</span></span>
+      <div class="language-switch" role="group" aria-label="Sprog">
+        <span class="language-indicator" aria-hidden="true"></span>
+        <button class="language-button is-active" data-language="da" type="button">DA</button>
+        <button class="language-button" data-language="en" type="button">EN</button>
+      </div>
+      <button class="icon-button dim-button" type="button" aria-label="Aktivér dim-tilstand" aria-pressed="false" data-i18n-aria-label="dimButton">
+        <span aria-hidden="true">☾</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="app-shell">
+    <section class="station-stage" aria-label="Radiostationer">
+      <div class="orbit orbit-outer" aria-hidden="true"></div>
+      <div class="orbit orbit-inner" aria-hidden="true"></div>
+      <div class="station-ring" id="stationRing"></div>
+      <p class="selection-hint" id="selectionHint" data-i18n="selectionHint">Vælg en station for at starte</p>
+    </section>
+
+    <section class="player-card" aria-label="Radioafspiller">
+      <div class="player-error" id="playerError" role="alert" hidden>
+        <span data-i18n="streamError">Kunne ikke oprette forbindelse</span>
+        <button type="button" class="text-button" id="retryButton" data-i18n="retry">Prøv igen</button>
+      </div>
+      <div class="cover-wrap">
+        <img class="station-cover" id="stationCover" src="./images/logo.svg" alt="Radio Player Denmark">
+      </div>
+      <div class="station-heading">
+        <div>
+          <h1 id="stationName" data-i18n="noRadio">No radio here yet</h1>
+          <span class="genre-chip" id="stationGenre">Live radio</span>
+        </div>
+        <div class="status-line" aria-live="polite">
+          <span class="status-dot" id="statusDot"></span>
+          <span id="statusText" data-i18n="idle">Klar til at spille</span>
+        </div>
+      </div>
+      <div class="now-playing" aria-live="polite">
+        <span class="eyebrow" data-i18n="nowPlaying">Nu spiller</span>
+        <strong id="trackTitle" data-i18n="noRadio">No radio here yet</strong>
+        <span id="trackArtist" data-i18n="welcomeArtist">Din lyd, dit rum.</span>
+      </div>
+      <div class="equalizer" id="equalizer" aria-hidden="true"></div>
+      <div class="player-controls">
+        <button class="play-button" id="playButton" type="button" aria-label="Afspil" data-i18n-aria-label="play" disabled>
+          <span class="play-icon" aria-hidden="true"></span>
+        </button>
+        <button class="control-button mute-button" id="muteButton" type="button" aria-label="Slå lyd fra" data-i18n-aria-label="mute" aria-pressed="false" disabled>⌁</button>
+        <label class="volume-control" for="volumeSlider">
+          <span class="sr-only" data-i18n="volume">Lydstyrke</span>
+          <input id="volumeSlider" type="range" min="0" max="1" value="0.72" step="0.01" aria-label="Lydstyrke">
+        </label>
+      </div>
+      <button class="history-trigger" id="historyButton" type="button" aria-expanded="false">
+        <span aria-hidden="true">◷</span>
+        <span data-i18n="recent">Sidste 10 sange</span>
+      </button>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <span>Radio Player Denmark</span>
+    <span class="footer-divider">•</span>
+    <span>Administrated by Wolmann Entertainment</span>
+    <span class="footer-divider">•</span>
+    <span class="footer-description" data-i18n="seoDescription">Dansk radio, programmering, tech og business</span>
+  </footer>
+
+  <aside class="history-panel" id="historyPanel" aria-label="Afspilningshistorik" aria-hidden="true">
+    <div class="history-header">
+      <div>
+        <span class="eyebrow" data-i18n="historyLabel">Historik</span>
+        <h2 data-i18n="recentTracks">Sidste 10 afspillede sange</h2>
+      </div>
+      <button class="icon-button close-history" id="closeHistory" type="button" aria-label="Luk historik">×</button>
+    </div>
+    <div class="history-list" id="historyList"></div>
+    <button class="clear-history" id="clearHistory" type="button" data-i18n="clearHistory">Ryd historik</button>
+  </aside>
+  <div class="history-backdrop" id="historyBackdrop" hidden></div>
+
+  <div class="language-prompt" id="languagePrompt" role="dialog" aria-modal="true" aria-labelledby="languagePromptTitle" hidden>
+    <div class="language-prompt-card">
+      <span class="eyebrow">Language</span>
+      <h2 id="languagePromptTitle">Would you like to view the site in Danish or English?</h2>
+      <div class="language-prompt-actions">
+        <button type="button" class="prompt-language-button" data-prompt-language="da">Danish</button>
+        <button type="button" class="prompt-language-button" data-prompt-language="en">English</button>
+      </div>
+    </div>
+  </div>
+
+  <audio id="audioPlayer" preload="auto" playsinline></audio>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Radio Player Denmark",
+    "description": "Gratis online radioafspiller med danske radiostationer, programmeringsradio, tech og musik.",
+    "inLanguage": ["da", "en"],
+    "publisher": {
+      "@type": "Organization",
+      "name": "Wolmann Entertainment"
+    }
+  }
+  </script>
+  <script type="module" src="./js/app.js?v=39"></script>
+</body>
+</html>
