@@ -173,8 +173,11 @@ function showError() {
 
 function togglePlay() {
   if (!currentStation) return;
-  if (audio.paused) audio.play().catch(showError);
-  else audio.pause();
+  if (audio.paused) {
+    selectStation(currentStation, { autoplay: true });
+    return;
+  }
+  audio.pause();
 }
 function renderHistory() {
   const list = $("#historyList");
