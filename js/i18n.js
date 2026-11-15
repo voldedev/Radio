@@ -7,7 +7,10 @@ const translations = {
     dimButton: "Aktivér dim-tilstand", loading: "Indlæser", playing: "Afspiller", paused: "Pause",
     liveRadio: "Live radio", noRadio: "Ingen radio her endnu", welcomeTitle: "Vælg en radio for at starte", welcomeArtist: "Din lyd, dit rum.",
     emptyHistory: "Ingen sange i historikken endnu.", visitWebsite: "Hjemmeside",
-    seoDescription: "Dansk og international radio, party, fest, gaming, tech og musik"
+    seoDescription: "Dansk og international radio, party, fest, gaming, tech og musik",
+    updateLabel: "Opdatering", updateTitle: "Ny opdatering tilgængelig",
+    updateMessage: "Der er kommet en ny version af radioen. Opdatér siden for at få de seneste ændringer.",
+    updateButton: "Opdatér siden"
   },
   en: {
     selectionHint: "Choose a station to start", idle: "Ready to play", nowPlaying: "Now playing", liveDirectory: "Live directory",
@@ -17,7 +20,10 @@ const translations = {
     dimButton: "Enable dim mode", loading: "Loading", playing: "Playing", paused: "Paused",
     liveRadio: "Live radio", noRadio: "No radio here yet", welcomeTitle: "Choose a station to start", welcomeArtist: "Your sound, your space.",
     emptyHistory: "No songs in history yet.", visitWebsite: "Website",
-    seoDescription: "Danish radio, programming, tech and business"
+    seoDescription: "Danish and international radio, party, gaming, tech and music",
+    updateLabel: "Update", updateTitle: "New update available",
+    updateMessage: "A new version of the radio player is available. Reload the page to get the latest changes.",
+    updateButton: "Reload page"
   }
 };
 

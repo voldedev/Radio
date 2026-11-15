@@ -1,6 +1,7 @@
 import { stations } from "./stations.js?v=53";
 import { getLanguage, hasLanguagePreference, setLanguage, t } from "./i18n.js?v=2";
 import { addHistory, clearHistory, readHistory, startPolling, stopPolling } from "./nowplaying.js?v=4";
+import { startUpdateChecks } from "./update-check.js?v=1";
 
 const $ = (selector) => document.querySelector(selector);
 const audio = $("#audioPlayer");
@@ -239,6 +240,7 @@ function init() {
     if (event.key === "ArrowDown") { $("#volumeSlider").value = Math.max(0, state.volume - .05); $("#volumeSlider").dispatchEvent(new Event("input")); }
   });
   if (firstVisit) $("#languagePrompt").hidden = false;
+  startUpdateChecks();
 }
 function toggleDim(force) { const enabled = force ?? !document.body.classList.contains("dim-mode"); document.body.classList.toggle("dim-mode", enabled); localStorage.setItem("radio-dim", enabled); $(".dim-button").setAttribute("aria-pressed", String(enabled)); }
 init();

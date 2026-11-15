@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Lyt gratis til danske og internationale radiostationer med party-, fest-, gaming-, techno-, rock-, pop-, tech- og musikradio direkte i din browser.">
   <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="app-version" content="2026.11.15.1">
   <meta name="author" content="Wolmann Entertainment">
   <meta name="theme-color" content="#171c25">
   <meta property="og:title" content="Radio Player Denmark – Danske og internationale radiostationer">
@@ -22,7 +23,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/tokens.css">
-  <link rel="stylesheet" href="./css/style.css?v=4">
+  <link rel="stylesheet" href="./css/style.css?v=5">
 </head>
 <body>
   <div class="background-aurora" aria-hidden="true"></div>
@@ -123,6 +124,14 @@
         <button type="button" class="prompt-language-button" data-prompt-language="da">Danish</button>
         <button type="button" class="prompt-language-button" data-prompt-language="en">English</button>
       </div>
+      <div class="update-prompt" id="updatePrompt" role="dialog" aria-modal="true" aria-labelledby="updatePromptTitle" hidden>
+        <div class="update-prompt-card">
+          <span class="eyebrow" data-i18n="updateLabel">Opdatering</span>
+          <h2 id="updatePromptTitle" data-i18n="updateTitle">Ny opdatering tilgængelig</h2>
+          <p data-i18n="updateMessage">Der er kommet en ny version af radioen. Opdatér siden for at få de seneste ændringer.</p>
+          <button class="update-prompt-button" id="reloadPageButton" type="button" data-i18n="updateButton">Opdatér siden</button>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -140,6 +149,6 @@
     }
   }
   </script>
-  <script type="module" src="./js/app.js?v=39"></script>
+  <script type="module" src="./js/app.js?v=40"></script>
 </body>
 </html>
