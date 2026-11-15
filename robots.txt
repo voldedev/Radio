@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://potatoteamgames.github.io/Radio/sitemap.xml
+Sitemap: https://voldedev.github.io/Radio/sitemap.xml
